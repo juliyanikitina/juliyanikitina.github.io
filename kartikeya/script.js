@@ -120,7 +120,9 @@ if (heroVideo) {
 }
 
 const motionClips = [...document.querySelectorAll('[data-motion-clip]')];
-if (motionClips.length && !reduceMotion) {
+const network = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+const shouldLoad4kVideo = !reduceMotion && !network?.saveData && !/^(slow-2g|2g|3g)$/.test(network?.effectiveType || '') && !window.matchMedia('(max-width: 760px)').matches;
+if (motionClips.length && shouldLoad4kVideo) {
   const fineHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const loadClip = (video) => {
     if (!video.getAttribute('src') && video.dataset.src) {

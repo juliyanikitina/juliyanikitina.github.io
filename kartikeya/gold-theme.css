@@ -39,7 +39,7 @@ body { background: #0d0b0a; color: var(--cream); }
 .chapter-card:after { background:linear-gradient(0deg,rgba(10,7,5,.88),transparent 62%); }
 .chapter-card-sport img { object-position:center 34%; }
 .chapter-card-sea img,.chapter-card-portrait img { object-position:68% center; }
-.chapter-card-sea>.motion-clip { object-position:86% center; }
+.chapter-card-sea>.motion-clip { object-position:100% center; }
 .manifesto-scene>.motion-clip { object-position:80% center; }
 .chapter-card .gold-light-sweep { pointer-events:none; }
 .gold-motion { position:relative; overflow:hidden; }
@@ -76,6 +76,9 @@ body { background: #0d0b0a; color: var(--cream); }
 .mission-copy p,.availability-inner p:not(.kicker) { color:#d3c4a9; }
 .next-section { background:radial-gradient(circle at 8% 10%,#33210e,#100c0a 55%); }
 .page-hero { background:#0d0b0a; }
+.page-hero>.page-hero-video { position:absolute; z-index:0; inset:0 0 0 auto; width:53%; height:100%; object-fit:cover; object-position:center; }
+.projects-hero>.page-hero-video { width:68%; object-position:70% center; }
+.page-hero.motion-active>.page-hero-video { opacity:.86; }
 .page-hero:before { content:""; position:absolute; z-index:1; inset:0; pointer-events:none; background:radial-gradient(circle at 83% 45%,rgba(232,171,78,.2),transparent 38%); }
 .mentor-hero-image,.projects-hero-image { object-position:center 33%; opacity:.88; filter:none; animation:gold-portrait-breathe 14s ease-in-out infinite alternate; }
 .projects-hero-image { width:68%; object-position:70% center; }
@@ -106,6 +109,8 @@ body { background: #0d0b0a; color: var(--cream); }
   .hero-video-stage.gold-ambient-stage { display:block; opacity:.25; }
   .hero-image-wrap:before { background:linear-gradient(0deg,#0d0b0a,transparent 42%,transparent 75%,#0d0b0a); }
   .mentor-hero-image,.projects-hero-image { width:100%; opacity:.45; }
+  .page-hero>.page-hero-video,.projects-hero>.page-hero-video { width:100%; opacity:.45; }
+  .page-hero.motion-active>.page-hero-video { opacity:.45; }
   .mentor-hero:after,.projects-hero:after,.story-hero:after { background:linear-gradient(0deg,#0d0b0a,rgba(13,11,10,.77) 46%,rgba(13,11,10,.31)); }
   .manifesto-scene img { object-position:72% center; }
   .chapter-card-sea img,.chapter-card-portrait img { object-position:63% center; }
