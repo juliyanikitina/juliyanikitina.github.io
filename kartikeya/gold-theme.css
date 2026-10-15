@@ -72,6 +72,11 @@ body { background: #0d0b0a; color: var(--cream); }
 .book-visual:after { z-index:2; background:linear-gradient(0deg,rgba(12,8,5,.75),transparent 50%),linear-gradient(90deg,rgba(132,81,23,.16),transparent); }
 .book-visual-label { z-index:3; }
 .book-visual img,.detail-image img { filter:sepia(.25) saturate(.9) contrast(1.04); }
+.book-visual img { object-position:center center; filter:none; }
+.book-visual:before { background:radial-gradient(circle at 50% 54%,rgba(255,197,84,.12),transparent 55%); }
+.book-hero-product { position:absolute; z-index:0; inset:0 0 0 auto; width:59%; height:100%; object-fit:cover; object-position:center; }
+.book-hero:after { content:""; position:absolute; z-index:1; inset:0; pointer-events:none; background:linear-gradient(90deg,#0d0b0a 0%,rgba(13,11,10,.97) 27%,rgba(13,11,10,.67) 52%,transparent 82%); }
+.book-hero .page-hero-inner { z-index:2; }
 .mission-section,.availability-section,.bio-outro,.book-statement { background:radial-gradient(circle at 84% 8%,#35230f,#120d0a 47%,#0b0908 90%); }
 .mission-copy p,.availability-inner p:not(.kicker) { color:#d3c4a9; }
 .next-section { background:radial-gradient(circle at 8% 10%,#33210e,#100c0a 55%); }
@@ -106,6 +111,10 @@ body { background: #0d0b0a; color: var(--cream); }
 @keyframes gold-light-sweep { 0%,18% { transform:translateX(-65%); } 72%,100% { transform:translateX(65%); } }
 @keyframes gold-halo { 50% { opacity:.65; transform:scale(1.055); } }
 @media (max-width:760px) {
+  .book-hero { display:flex; flex-direction:column; align-items:stretch; min-height:0; }
+  .book-hero-product { position:relative; width:100%; height:auto; max-height:470px; aspect-ratio:1.5; object-fit:cover; order:2; }
+  .book-hero:after { display:none; }
+  .book-hero .page-hero-inner { order:1; padding-bottom:26px; }
   .hero-video-stage.gold-ambient-stage { display:block; opacity:.25; }
   .hero-image-wrap:before { background:linear-gradient(0deg,#0d0b0a,transparent 42%,transparent 75%,#0d0b0a); }
   .mentor-hero-image,.projects-hero-image { width:100%; opacity:.45; }
