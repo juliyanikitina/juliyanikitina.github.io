@@ -161,3 +161,4 @@ button{font:inherit}
 .ambient-audio-toggle[aria-pressed="true"]{background:rgba(75,49,18,.96);border-color:#f3ce83}
 .ambient-audio-icon{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:linear-gradient(145deg,#f4d793,#b77c28);color:#241505;font-size:17px}
 @media(max-width:560px){.ambient-audio-toggle{right:12px;bottom:12px;padding:7px 11px 7px 7px;font-size:9px}.ambient-audio-icon{width:25px;height:25px}}
+@media(max-width:560px){.footer-legal{flex-direction:column;align-items:flex-start;padding-bottom:76px}.footer-legal>span{max-width:100%}.footer-legal>a{display:inline-block}}
